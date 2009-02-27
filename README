@@ -20,3 +20,25 @@ $ cd prender
 $ python processing.py
 
 Several images should show up
+
+--== Using PRender ==--
+
+Draw an X and save it as a "x.png":
+
+  from prender import processing
+  pr = processing.BaseRenderer()
+  pr.start(200,200)
+  pr.line(0,0,100,100)
+  pr.line(0,100,100,0)
+  pr.saveLocal( "x.png" )
+  pr.stop()
+
+The class "MapRenderer" is helpful for rendering maps
+
+  from prender import processing
+  mr = processing.MapRenderer()
+  mr.start(-500,-500,500,500,500) #left,bottom,right,top,width
+  mr.background(255,255,255)
+  mr.line(-500,-500,500,500) #from lower-lefthand to upper-righthand
+  mr.saveLocal("map.png")
+  mr.stop()
