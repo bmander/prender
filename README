@@ -3,5 +3,5 @@
   "java.lang.ClassCastException: renderer cannot be cast to processing.core.PApplet
     at processing.core.PApplet.main(PApplet.java:6486)"
 3) Go to "File"->"Export Application" and export a linux application.
-4) Run processing.py. If three images appear in the same directory as processing.py, everything is working.
-5) You can delete those images. They don't do anything important. You'll need the "render" command exported by Processing.
+4) Run prender/processing.py. If three images appear in the same directory as processing.py, everything is working.
+5) You can delete those images. They don't do anything important.
