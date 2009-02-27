@@ -144,7 +144,7 @@ class MapRenderer(BaseRenderer):
         BaseRenderer.strokeWeight( self, weight )
 
 def selftest():
-    pp = BaseRenderer("./application.linux/renderer")
+    pp = BaseRenderer("./renderer/application.linux/renderer")
     pp.start(200,200)
     pp.smooth()
     pp.background( 255, 255, 255 )
@@ -173,7 +173,7 @@ def selftest():
     pp.saveLocal( "point.png" )
     pp.stop()
     
-    mr = MapRenderer("./application.linux/renderer")
+    mr = MapRenderer("./renderer/application.linux/renderer")
     mr.start(-500, -500, 500, 500, 500)
     mr.smooth()
     mr.background( 255, 255, 255 )

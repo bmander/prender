@@ -1,4 +1,4 @@
-1) Open renderer.pde in Processing
+1) Open renderer/renderer.pde in Processing
 2) Run it. It should throw an error along the lines of.
   "java.lang.ClassCastException: renderer cannot be cast to processing.core.PApplet
     at processing.core.PApplet.main(PApplet.java:6486)"
