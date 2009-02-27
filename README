@@ -1,7 +1,22 @@
+--== Compile rendering server ==--
+
 1) Open renderer/renderer.pde in Processing
 2) Run it. It should throw an error along the lines of.
   "java.lang.ClassCastException: renderer cannot be cast to processing.core.PApplet
     at processing.core.PApplet.main(PApplet.java:6486)"
 3) Go to "File"->"Export Application" and export a linux application.
-4) Run prender/processing.py. If three images appear in the same directory as processing.py, everything is working.
-5) You can delete those images. They don't do anything important.
+
+--== Install rendering server ==--
+
+$ sudo make install
+
+--== Install python client library ==--
+
+$ sudo python setup install
+
+--== Test ==--
+
+$ cd prender
+$ python processing.py
+
+Several images should show up
