@@ -21,8 +21,15 @@ class BaseRenderer:
                 "NOFILL":13,
                 "FILL":14}
 
-    def __init__(self, engine):
+    def __init__(self, engine="/usr/bin/prender/renderer"):
         self.engine = engine
+        
+    def execute(self, width, height, func):
+        self.start(width,height)
+        try:
+            func(self)
+        finally:
+            self.stop()
         
     def start(self, width, height):
         self.fp = subprocess.Popen(self.engine, stdin=subprocess.PIPE)
@@ -115,6 +122,13 @@ class MapRenderer(BaseRenderer):
         BaseRenderer.start(self, width, height)
         self.scale(resolution,resolution)
         self.translate( -l, t )
+        
+    def execute(self, l, b, r, t, width, func):
+        self.start(l, b, r, t, width)
+        try:
+            func(self)
+        finally:
+            self.stop()
         
     def line(self, x1, y1, x2, y2):
         x1 *= self.reshelp
