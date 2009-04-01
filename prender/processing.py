@@ -28,6 +28,8 @@ class BaseRenderer:
         self.start(width,height)
         try:
             func(self)
+        except Exception, ex:
+            raise ex
         finally:
             self.stop()
         
@@ -127,6 +129,8 @@ class MapRenderer(BaseRenderer):
         self.start(l, b, r, t, width)
         try:
             func(self)
+        except Exception, ex:
+            raise ex
         finally:
             self.stop()
         

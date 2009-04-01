@@ -19,8 +19,11 @@ If python throws an unhandled exception while the renderer is running, it will s
     xx.line(0,0,100,100)
     xx.line(0,100,100,0)
     xx.saveLocal( "x.png" )
+    raise Exception( "random problem" )
   
   pr.execute( 200, 200, draw )
+  
+The execute() method runs the function draw() until it finishes or catches an exception, at which point it stops the renderer.
 
 The class "MapRenderer" is helpful for rendering maps
 
