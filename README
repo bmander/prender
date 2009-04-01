@@ -9,6 +9,18 @@ Draw an X and save it as a "x.png":
   pr.line(0,100,100,0)
   pr.saveLocal( "x.png" )
   pr.stop()
+  
+If python throws an unhandled exception while the renderer is running, it will stall forever. Some sugar to handle that:
+
+  from prender import processing
+  pr = processing.BaseRenderer()
+  
+  def draw(xx):
+    xx.line(0,0,100,100)
+    xx.line(0,100,100,0)
+    xx.saveLocal( "x.png" )
+  
+  pr.execute( 200, 200, draw )
 
 The class "MapRenderer" is helpful for rendering maps
 
