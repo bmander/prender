@@ -1,0 +1,5 @@
+#!/bin/sh
+
+# A cheesey script to run the renderer using java (only needed on MacOS X)
+
+java -cp /usr/bin/prender/core.jar:/usr/bin/prender/renderer.jar renderer
