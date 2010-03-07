@@ -40,10 +40,10 @@ The class "MapRenderer" is helpful for rendering maps
 --== Compile rendering server ==--
 
 1) Open renderer/renderer.pde in Processing
-2) Run it. It should throw an error along the lines of.
+2) Run it. It may throw an error along the lines of.
   "java.lang.ClassCastException: renderer cannot be cast to processing.core.PApplet
     at processing.core.PApplet.main(PApplet.java:6486)"
-3) Go to "File"->"Export Application" and export a linux application.
+3) Go to "File"->"Export Application" and export a linux or mac application, depending on your platform.
 
 --== Install rendering server ==--
 
